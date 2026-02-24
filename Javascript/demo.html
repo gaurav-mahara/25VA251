@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS INTRO</title>
+</head>
+<body>
+    <h1 >JAVA SCRIPT</h1>
+    <script>
+        //using var keyword
+    var myname="gaurav";
+        //In JavaScript, the term "documents" refers to the Document Object Model (DOM), which is a programming interface that treats an HTML or XML page as a tree structure of objects. The document object itself acts as the main entry point to all the content on a web page, allowing JavaScript to access and manipulate the page dynamically.
+    document.write(myname);//output on browser 
+    console.log(myname);//output on console
+    //JS Execution and Scope in JS (Global and Local[block])
+    function hello(){
+        var msg="welcome";
+        console.log(msg);
+    }
+    hello();
+    //variable declaration using let and const
+    let myRollno=2503201000503;
+    console.log(myRollno);
+    
+    myRollno=202501010901;//No redeclaration but reassignment is possible
+    console.log(myRollno);
+     
+    const myPhoneno=9315925233;
+    console.log("My phone no. is " + myPhoneno);
+
+    myPhoneno=9315925233;/// No declaration and no assignment is poosible
+    console.log("My phone no. is " + myPhoneno);
+    
+    </script>
+    
+</body>
+</html>
