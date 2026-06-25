@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Result Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #dbeafe;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 350px;
+            margin: 80px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 0 8px gray;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        input {
+            width: 90%;
+            padding: 8px;
+            margin: 6px 0;
+        }
+
+        button {
+            background-color: #2563eb;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #1d4ed8;
+        }
+
+        #result {
+            margin-top: 15px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Student Result Calculator</h2>
+
+        <input type="number" id="sub1" placeholder="Subject 1 Marks">
+        <input type="number" id="sub2" placeholder="Subject 2 Marks">
+        <input type="number" id="sub3" placeholder="Subject 3 Marks">
+        <input type="number" id="sub4" placeholder="Subject 4 Marks">
+        <input type="number" id="sub5" placeholder="Subject 5 Marks">
+
+        <button onclick="calculateResult()">Calculate Result</button>
+
+        <div id="result"></div>
+    </div>
+
+    <script>
+        function calculateResult() {
+
+            let s1 = Number(document.getElementById("sub1").value);
+            let s2 = Number(document.getElementById("sub2").value);
+            let s3 = Number(document.getElementById("sub3").value);
+            let s4 = Number(document.getElementById("sub4").value);
+            let s5 = Number(document.getElementById("sub5").value);
+
+            let total = s1 + s2 + s3 + s4 + s5;
+            let percentage = (total / 500) * 100;
+
+            let result = "Pass";
+
+            if (s1 < 33 || s2 < 33 || s3 < 33 || s4 < 33 || s5 < 33) {
+                result = "Fail";
+            }
+
+            document.getElementById("result").innerHTML =
+                "Total Marks: " + total + "/500<br>" +
+                "Percentage: " + percentage.toFixed(2) + "%<br>" +
+                "Result: " + result;
+        }
+    </script>
+
+</body>
+</html>
